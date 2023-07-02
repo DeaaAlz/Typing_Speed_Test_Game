@@ -1,0 +1,244 @@
+@font-face {
+  font-family: "ff";
+  src: url(./Cairo-VariableFont_slnt\,wght.ttf);
+}
+:root {
+  --main-color: #2196f3;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "ff", sans-serif;
+}
+.game {
+  background-color: #eee;
+  min-height: 100vh;
+}
+.container {
+  margin: auto;
+  max-width: 900px;
+}
+.header {
+  background-color: var(--main-color);
+  color: white;
+  padding: 20px;
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header .name{
+  
+}
+.header .levels{
+  font-size: 18px;
+  font-weight: normal;
+  cursor: pointer;
+  position: relative;
+}
+.header .levels i{
+  font-size: 14px;
+  transition: 0.5s;
+}
+.header .levels ul{
+  position: absolute;
+  padding: 0;
+  list-style: none;
+  right: 0;
+  background-color: white;
+  top: 40px;
+  width: 89px;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 0px;
+  transition: 0.5s;
+}
+.header .levels ul li{
+  transition: 0.5s;
+}
+
+.header .levels:hover ul{
+  height: 100px;
+}
+
+.header .levels:hover #aa{
+  transform: rotate(90deg);
+}
+.header .levels ul li:nth-child(2){
+  border-top: 1px solid #8888;
+  border-bottom: 1px solid #8888;
+}
+.header .levels ul li a{
+  text-decoration: none;
+  color: var(--main-color);
+  transition: 0.5s;
+}
+.header .levels ul li:hover{
+  background-color:#2195f3 ;
+}
+.header .levels ul li:hover a{
+  margin-left: 8px;
+  color: white;
+}
+
+
+.message {
+  background-color: white;
+  padding: 5px;
+  margin: 15px 0;
+  border-radius: 6px;
+  text-align: center;
+}
+.message span {
+  font-weight: bold;
+  color: #0093ce;
+}
+.message span::before {
+  content: "[ ";
+}
+.message span::after {
+  content: " ]";
+}
+.start {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #0093ce;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 6px;
+}
+.start:hover {
+  background-color: #0080b3;
+}
+.the-word {
+  text-align: center;
+  font-weight: bold;
+  font-size: 50px;
+  color: var(--main-color);
+  user-select: none;
+}
+.input {
+  margin: 10px 0;
+  width: 100%;
+  display: block;
+  padding: 15px;
+  border: 3px solid var(--main-color);
+  font-size: 20px;
+  text-align: center;
+  text-transform: capitalize;
+  border-radius: 6px;
+  caret-color: var(--main-color);
+  font-family: "ff";
+}
+.input:focus {
+  outline: none;
+}
+.upcoming-words {
+  background-color: white;
+  margin: 5px 0;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.upcoming-words div {
+  background-color: var(--main-color);
+  color: white;
+  font-weight: bold;
+  margin: 4px;
+  padding: 10px;
+  border-radius: 4px;
+}
+.control {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 15px;
+}
+.control span {
+  font-weight: bold;
+  color: #009688;
+}
+.finish {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.582);
+  font-weight: bold;
+  font-size: 80px;
+  text-align: center;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+  flex-direction: column;
+}
+.finish .good {
+  color: var(--main-color);
+  transform: scale(0);
+  transition: 0.5s;
+  animation: finishGame 2s forwards;
+}
+.finish .bad {
+  color: red;
+  transform: scale(0);
+  transition: 0.5s;
+  animation: finishGame 2s forwards;
+}
+
+.replay {
+  font-size: 22px;
+  display: block;
+  border: 2px solid var(--main-color);
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  background-color: var(--main-color);
+  color: #fff;
+  margin-top: 60px;
+}
+
+.display-none {
+  display: none;
+}
+
+.box-shadow-red {
+  box-shadow: inset 0 0 267px 15px red;
+}
+.box-shadow-blue {
+  box-shadow: inset 0 0 267px 15px var(--main-color);
+}
+
+@keyframes finishGame {
+  0% {
+    transform: scale(0) rotate(35deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+
+.hard{
+  color:crimson;
+}
+
+.normal{
+  color:rgb(179, 120, 77);
+}
+
+.easy{
+  color:chartreuse;
+}
+
